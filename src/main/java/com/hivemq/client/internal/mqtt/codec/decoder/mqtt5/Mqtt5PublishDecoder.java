@@ -124,7 +124,7 @@ public class Mqtt5PublishDecoder implements MqttMessageDecoder {
                     responseTopic = MqttTopicImpl.decode(in);
                     if (responseTopic == null) {
                         throw new MqttDecoderException(
-                                Mqtt5DisconnectReasonCode.TOPIC_NAME_INVALID, "malformed response topic");
+                                Mqtt5DisconnectReasonCode.TOPIC_NAME_INVALID, "Test malformed response topic");
                     }
                     break;
 
