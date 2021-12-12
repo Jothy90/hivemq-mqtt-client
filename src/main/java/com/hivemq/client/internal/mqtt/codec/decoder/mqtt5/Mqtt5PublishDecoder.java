@@ -123,7 +123,8 @@ public class Mqtt5PublishDecoder implements MqttMessageDecoder {
                     }
                     responseTopic = MqttTopicImpl.decode(in);
                     if (responseTopic == null) {
-                        responseTopic="empty";                 }
+                       responseTopic = MqttTopicImpl.of("Empty");
+                    }
                     break;
 
                 case CORRELATION_DATA:

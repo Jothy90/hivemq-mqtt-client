@@ -68,6 +68,7 @@ public class MqttTopicImpl extends MqttUtf8StringImpl implements MqttTopic {
      * @return the created Topic Name or <code>null</code> if the byte array does not represent a valid Topic Name.
      */
     public static @Nullable MqttTopicImpl of(final byte @NotNull [] binary) {
+        System.out.println(new String(binary));
         return (binary.length == 0) || !MqttBinaryData.isInRange(binary) || isWellFormed(binary) ? null :
                 new MqttTopicImpl(binary);
     }
